@@ -1,16 +1,25 @@
 import React from "react";
 
-function app() {
-  return (
+let isNewUser = true;
+let contant;
+
+if (isNewUser){
+  contant = <Signup />;
+}else{
+  contant = <Login />;
+}
+
+
+function Signup() {
+  return <button>register</button>;
+}
+function Login() {
+  return <button>login</button>;
+}
+export default function App() {
+  return(
     <div>
-      <h1>My To-Do List</h1>
-      <ul>
-        <li>✅ Learn React</li>
-        <li>✅ Build To-Do App</li>
-        <li>🛠️ Add Features</li>
-      </ul>
+      {contant}
     </div>
   );
 }
-
-export default app;
