@@ -1,25 +1,17 @@
 import React from "react";
 
-let isNewUser = true;
-let contant;
+const products = [
+  {title : 'apple',isPhone: false, id:1 },
+  {title : 'pc',isPhone: false, id:2 },
+  {title : 'oppo',isPhone: true, id:3 }
+]
 
-if (isNewUser){
-  contant = <Signup />;
-}else{
-  contant = <Login />;
-}
-
-
-function Signup() {
-  return <button>register</button>;
-}
-function Login() {
-  return <button>login</button>;
-}
 export default function App() {
+  const list = products.map(product => 
+    <li key={product.id} style={{color: product.isPhone ? "red" : "green"}}>{product.title}</li>) 
   return(
     <div>
-      {contant}
+      <ul>{list}</ul>
     </div>
   );
 }
