@@ -1,17 +1,17 @@
-import React from "react";
+import { useState } from "react";
 
-const products = [
-  {title : 'apple',isPhone: false, id:1 },
-  {title : 'pc',isPhone: false, id:2 },
-  {title : 'oppo',isPhone: true, id:3 }
-]
+function Btn() {
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
+  }
+  return <button onClick={handleClick}>Click {count} times</button>;
+}
 
 export default function App() {
-  const list = products.map(product => 
-    <li key={product.id} style={{color: product.isPhone ? "red" : "green"}}>{product.title}</li>) 
-  return(
+  return (
     <div>
-      <ul>{list}</ul>
+      <Btn />
     </div>
   );
 }
