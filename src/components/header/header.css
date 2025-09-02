@@ -50,16 +50,19 @@ header .fixed{
 header .fixed ul.model{
     width: 85%;
     margin: 2rem auto;
-    border: red solid;
     list-style: none; 
     border-radius: 1rem;
     padding: 1rem 2rem;
+    background: rgb(24,24,27);
 }
 header .fixed ul.model li a{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
-
+header .fixed ul.model li{
+    border-bottom: 1px solid #353535;
+    padding: 1rem 0;
+}
 
 
 
