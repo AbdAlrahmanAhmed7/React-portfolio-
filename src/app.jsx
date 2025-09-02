@@ -1,17 +1,19 @@
-import { useState } from "react";
 
-function Btn() {
-  const [count, setCount] = useState(0);
-  function handleClick() {
-    setCount(count + 1);
-  }
-  return <button onClick={handleClick}>Click {count} times</button>;
-}
+import Header from './components/header/header';
+import Hero from './components/hero/hero';
+import Main from './components/main-contant/main';
+import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
+
 
 export default function App() {
-  return (
-    <div>
-      <Btn />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <Hero />
+            <Main />
+            <Contact />
+            <Footer/>
+        </div>
+    );
 }
