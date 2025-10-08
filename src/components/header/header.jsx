@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 
 function Header(){
+    const [showModel,setShowModel] = useState(false)
     return (
         <header>
-            <button className="menu">show model</button>
             <nav>
                 <ul>
                     <li><a href="#!">About</a></li>
@@ -16,16 +16,22 @@ function Header(){
             </nav>
 
 
+            <button onClick={() => setShowModel(true)} className="menu">show model</button>
 
-            <div className="fixed">
-                <ul className="model">
-                    <li><a href="#!">About</a></li>
-                    <li><a href="#!">Articles</a></li>
-                    <li><a href="#!">Projects</a></li>
-                    <li><a href="#!">Speaking</a></li>
-                    <li><a href="#!">Contant</a></li>
-                </ul>
-            </div>
+
+            {showModel && (
+                <div className="fixed">
+                    <ul className="model">
+                        <li><i onClick={() => setShowModel(false)} class="material-icons">clear</i></li>
+                        <li><a href="#!">About</a></li>
+                        <li><a href="#!">Articles</a></li>
+                        <li><a href="#!">Projects</a></li>
+                        <li><a href="#!">Speaking</a></li>
+                        <li><a href="#!">Contant</a></li>
+                    </ul>
+                </div>
+            )}
+
          </header>
     );
 }

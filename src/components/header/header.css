@@ -24,7 +24,7 @@ nav ul li{
     transition: .7s;
 }
 nav ul li:hover{
-    scale: .9;
+    background-color: blue;
     cursor: pointer;
 }
 a{
@@ -60,8 +60,26 @@ header .fixed ul.model li a{
     font-size: 1.2rem;
 }
 header .fixed ul.model li{
-    border-bottom: 1px solid #353535;
+    border-bottom: 1px solid #353535;       
     padding: 1rem 0;
+}
+header .fixed ul.model li:first-child{
+    text-align: right;
+}
+header .fixed ul.model li i{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    transition: .9s;
+    cursor: pointer;
+    color: #cc0000;
+}
+header .fixed ul.model li i:first-child:hover{
+    color: #ff0000;
+    rotate: 180deg;
+}
+header .fixed ul.model li:last-child{
+    border: none;
 }
 
 
